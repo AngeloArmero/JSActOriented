@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Activity object Oriented</title>
+</head>
+<body>
+    <form>
+		FIRST NAME: <input type="text" id="fname" ><br><br>
+		LAST NAME: <input type="text" id="lname"><br><br>
+		AGE: <input type="number" id="age" ><br><br>
+        Gender:
+        <select name="gender" id="Gender" required>
+           <option value="">Gender</option>
+           <option value="Male">Male</option>
+           <option value="Female">Female</option>
+     </select><br><br>
+		BIRTHDATE: <input type="date" id="bday" ><br><br>
+		ADDRESS: <input type="text" id="address" ><br><br>
+		EMAIL ADDRESS: <input type="email" id="eadd" ><br><br>
+	    <button onclick="GetPinformation()">View Information</button> 
+	</form>
+
+<script type="text/javascript">
+
+function GetPinformation(){
+            //methods
+            const PInformation = { 
+                Fname: document.getElementById ("fname").value,
+                Lname: document.getElementById ("lname").value,
+                Age: document.getElementById ("age").value,
+                Gender: document.getElementById ("Gender").value, 
+                Bday: document.getElementById ("bday").value,
+                Address: document.getElementById ("address").value,
+                Email: document.getElementById ("eadd").value,     
+                
+                view:function(){document.write(" Your given information is: " + this.Fname + ' ' + this.Lname+ ' ' + this.Age + ' ' + this.Gender + ' ' + this.Bday + ' ' + this.Address + ' ' + this.Email);} 
+      
+            }
+            PInformation.view();
+        }
+</script>
+</body>
+</html>
